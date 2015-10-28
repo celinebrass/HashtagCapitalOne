@@ -1,0 +1,19 @@
+extends layout 
+
+block content
+  .row
+    .col-sm-2
+    .col-sm-8
+      h1= title
+      h4 What is sentiment analysis?
+      p This app uses the AlchemyApi Targeted Sentiment Analysis tool to analyze instagram posts and caluculate whether they 
+        are positive or negative in attitude towards Capital One.  Posts are assigned a score between -1 and 1, with 1 representing an
+        extremely positive post and -1 representing an extremely negative post.  The graph shows the last 100 posts with the #CapitalOne tag and calculates the least squares regression line, also known as "line of best fit"
+        for the data. 
+
+    .col-sm-2
+  include trends.html
+
+
+block linkedScripts
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8")

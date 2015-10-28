@@ -1,0 +1,67 @@
+doctype html
+html(lang='en')
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    block preLinkedScripts
+    script(src='http://code.jquery.com/jquery-1.11.1.min.js')
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+    script(src='/bootstrap/js/bootstrap.min.js')
+    
+    style.
+      .alert.alert-dismissable {
+        margin-bottom: 0px;
+        height: 39px;
+        padding-top: 8px;
+        padding-left: 0px;
+        padding-right: 35px;
+        text-align: center;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 7px;
+        opacity: .85;
+      }
+      .alert-danger {
+        border-color: #B94A48;
+      }
+      .alert-success {
+        border-color: #468847;
+      }
+
+    block linkedStyles
+
+  body
+    .navbar.navbar-default.navbar-fixed-top
+      .container
+          .navbar-header
+            .visible-xs
+              a.navbar-brand(href='/', style="background-image: url('/images/title_logo.png'); background-size: 120px 30px; padding-right: 150px; background-repeat: no-repeat; background-position: center")
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href="/", style='font-weight: bold')
+              | &nbsp;&nbsp;#CapitalOne&nbsp;&nbsp;
+
+          #navbar-main.navbar-collapse.collapse
+            ul.nav.navbar-nav
+              li
+                a(href='../') Recent Activity
+              li
+                a(href='../trends/') Trends
+              li
+                a(href='../trendstest/') Trends Test
+    br
+
+    .hidden-xs.page-header
+      h1
+    .hidden.visible-xs
+      br
+      br
+    
+
+    block content
+            
+    block linkedScripts
+    script(src='/javascripts/typeahead.jquery.js')
+
