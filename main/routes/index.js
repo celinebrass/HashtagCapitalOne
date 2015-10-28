@@ -78,9 +78,6 @@ router.get('/recent_json', function (req, res){
 								postJson.sentWord = "Very Postive"
 							}
 						}
-						else if (response.status!='OK'){
-							console.log(response.statusInfo);
-						}
 						else if (response.docSentiment.type == 'neutral'){
 							postJson.sentWord = "Neutral";
 						}
@@ -90,6 +87,7 @@ router.get('/recent_json', function (req, res){
 					}
 					else {
 						postJson.sentWord = "Could not analyze."
+						//console.log(response.statusInfo);
 					}
 					postArray.push(postJson);
 					end();
