@@ -67,7 +67,7 @@ function populateTableRecentActivity() {
 				},
 				{ data: 'name', width:'10%' },
 				{ data: 'username', width: '10%' },
-				{ data: 'post', width: '25%' },
+				{ data: 'post', width: '40%' },
 				{
 					data: null,
 					render: function(data) {
@@ -100,6 +100,13 @@ function populateTableRecentActivity() {
 	    	$this = $(item);
 	    	$this.addClass('recentActivity');
 	    });
+
+		//make the table layout fixed 
+		var table = document.getElementById('recentActivity');
+		table.style.tableLayout="fixed";
+		table.style.whiteSpace = "normal";
+		table.style.wordBreak="normal";
+
 	});
 }
 function populateUserTable(userId) {
