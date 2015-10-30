@@ -65,7 +65,7 @@
 		.orient("left")
 		.ticks(10);
 
-	var jsonUrl = '/test_data'
+	var jsonUrl = '/test_data_trend_json'
 	d3.json(jsonUrl, function(data) {
 		var yData = data.map(function (d) { return d['sentiment']; })
 		console.log(yData[0]);
