@@ -1,7 +1,6 @@
 # HashtagCapitalOne
 
-Used Instagram API, Alchemy API for sentiment analysis, and D3 to display data
-Here is a link to the deployed app: http://hashtagcapitalone.elasticbeanstalk.com/
+Used Instagram API, Alchemy API for sentiment analysis, and D3 to display data.
 
 My solution: 
 
